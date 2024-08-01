@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Property(overflow)</title>
+
+    <style type="text/css">
+      .div1 {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        align-content: center;
+      }
+      .table1 {
+        width: 100%;
+        background-color: aqua;
+        border-collapse: collapse;
+        border: 3px solid steelblue;
+      }
+
+      .non {
+        border: 3px solid orange;
+      }
+
+      /* 기본값 */
+      .visible {
+        overflow: visible;
+        border: 3px solid pink;
+      }
+
+      .hidden {
+        overflow: hidden;
+        border: 3px solid magenta;
+      }
+
+      .auto1 {
+        width: auto;
+        height: auto;
+        border: 3px solid skyblue;
+      }
+
+      /* 필요에 따라 가로 세로 스크롤 생성. */
+      .auto2 {
+        overflow: auto;
+        border: 3px solid lightgray;
+      }
+
+      /* 무조건 가로 세로 스크롤 생성. */
+      .scroll {
+        overflow: scroll;
+        border: 3px solid darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1 scroll">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis asperiores at ipsam
+      soluta vitae rem eum non beatae sunt iste similique, culpa nihil quod dolores, accusantium
+      consequatur quia iusto sed aliquid eveniet, exercitationem maxime unde. Animi similique odit
+      reprehenderit consectetur corporis saepe dolorem sapiente earum tenetur pariatur aliquid rem
+      quos molestiae eum magni reiciendis eius esse nam cumque, eaque, rerum quidem labore?
+      Necessitatibus fuga nulla nisi, deleniti unde corrupti molestias excepturi vel, sit quam
+      officia. Delectus quidem qui molestias et. Nemo iste labore expedita? Autem nostrum aspernatur
+      corporis temporibus quidem ad mollitia totam, velit et vero earum, laudantium in. Nemo officia
+      commodi eaque provident odio, cum quae neque eveniet culpa fugit ullam modi non similique
+      repellendus autem nostrum quibusdam optio excepturi nihil ipsa aliquam expedita itaque!
+      Exercitationem earum harum amet ipsa ullam architecto, minus similique esse aperiam aut
+      nesciunt laborum repudiandae quidem distinctio voluptatibus, ad, rem officia. Beatae quis fuga
+      vero, ratione accusantium laborum eius numquam quisquam cupiditate labore natus molestiae
+      harum aliquid iusto itaque deleniti! Corporis reiciendis placeat blanditiis necessitatibus
+      nisi recusandae quidem, maxime unde eligendi officia iste quo voluptate qui, corrupti
+      laboriosam, temporibus molestiae? Facilis quis at quo minus quaerat quidem esse voluptatibus
+      magnam ullam ipsa quae eius debitis iste itaque laudantium, obcaecati iusto labore tempora
+      consequuntur possimus qui non architecto minima. Necessitatibus amet repellendus eos. Animi
+      cum ab, minus perferendis molestias corporis delectus rem illum exercitationem eligendi
+      assumenda a suscipit, aspernatur, recusandae omnis repellendus similique eos quasi iusto at
+      sint tenetur eius cumque. Officia, qui ea! Laborum atque ut rerum in dolores mollitia expedita
+      exercitationem, animi commodi magnam officia deserunt doloribus molestiae, consequuntur autem
+      laudantium eum veniam voluptates, recusandae eligendi qui perferendis? Maiores laboriosam
+      perferendis id nisi nam. Culpa excepturi optio ex non delectus, eaque, commodi aperiam odio
+      eum sit aliquid reprehenderit eos ducimus possimus numquam perspiciatis soluta amet. Aliquam
+      consequatur deleniti eius sapiente iure reprehenderit molestiae omnis eum placeat iste ducimus
+      odio a, doloremque molestias nostrum quisquam eveniet fugit nobis quas dolorem repellendus!
+      Quo assumenda nobis recusandae distinctio accusantium architecto perferendis quas rerum amet
+      doloremque cupiditate aut minima alias tempora, quisquam ut, rem sit, nesciunt sint sunt?
+      Earum itaque maiores quibusdam adipisci ut laudantium inventore doloribus accusantium officia
+      pariatur, sunt soluta, consequatur vel blanditiis. Tempora aliquam incidunt praesentium a
+      impedit minima adipisci tempore atque odio saepe cupiditate ad sed ullam sapiente, eveniet
+      iste, unde delectus quasi numquam fugiat id vel nulla facilis porro? Dolor eligendi expedita
+      dicta iusto eum architecto asperiores neque magni commodi facere enim natus, fugit a eaque
+      dolores eos quasi officiis corporis libero quae sunt! Tenetur quod perferendis ipsum totam
+      aliquam eveniet itaque possimus repudiandae nesciunt eum alias reiciendis voluptas excepturi
+      aperiam voluptatem laudantium odit blanditiis est incidunt modi, quia molestias ratione
+      beatae. Quam, animi? Esse exercitationem delectus eaque culpa quasi earum, odit ex consectetur
+      illo quod cupiditate recusandae error sint aut! Vero sint facere nulla pariatur? Vero
+      molestiae suscipit, numquam quas molestias ullam dolor excepturi commodi ipsa nisi rerum
+      explicabo facilis qui veritatis totam itaque sunt accusantium. Aspernatur, architecto
+      adipisci. Animi, doloremque?
+    </div>
+    <table class="table1">
+      <tr>
+        <td colspan="2">width: 300px height: 300px</td>
+        <td colspan="2">width: auto height: auto</td>
+      </tr>
+      <tr>
+        <td>visible</td>
+        <td>hidden</td>
+        <td>auto</td>
+        <td>scroll</td>
+      </tr>
+    </table>
+  </body>
+</html>

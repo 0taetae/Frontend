@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descendant Selector(하위선택자)</title>
+    <style type="text/css">
+      div div {
+        background: blue;
+        color: red;
+      }
+      div p {
+        border: 3px dashed darkslategrey;
+        background: lightgray;
+        color: slateblue;
+      }
+      div > div {
+        border: 5px dotted hotpink;
+        background: green;
+        color: orange;
+      }
+      div > p {
+        background: pink;
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      최상단 div 영역
+      <p>div > p 최상단 div의 자식 p 영역</p>
+      <div>
+        div > div 최상단 div의 자식 div 영역
+        <span>
+          <div>
+            span > div span의 자식 div 영역
+            <ul>
+              <li><p>div p div 하위(자손) 선택자 p 영역</p></li>
+            </ul>
+          </div>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

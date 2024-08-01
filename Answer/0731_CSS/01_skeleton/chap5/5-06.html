@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sibling Selector(형제선택자)</title>
+    <style type="text/css">
+      div + p {
+        background: lightgray;
+        color: orange;
+      }
+      div.target ~ p {
+        background: green;
+        color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>첫번째 div 영역</div>
+    <p>div와 형제인 첫번째 p 영역</p>
+    <p>div와 형제인 두번째 p 영역</p>
+    <div class="target">class명이 target인 두번째 div 영역</div>
+    <p>class명이 target인 div의 첫번째 형제 p 영역</p>
+    <p>class명이 target인 div의 두번째 형제 p 영역</p>
+    <div>세번째 div 영역</div>
+    <p>세번째 div와 형제인 첫번째 p 영역</p>
+  </body>
+</html>

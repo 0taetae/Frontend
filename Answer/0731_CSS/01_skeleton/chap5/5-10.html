@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selector(속성선택자)</title>
+    <style type="text/css">
+      [title] {
+        color: steelblue;
+        font-weight: bold;
+      }
+      [title="two"] {
+        border: 2px solid pink;
+      }
+      p[title="two"] {
+        color: orange;
+      }
+      p[title~="second"] {
+        background: silver;
+      }
+      p[class^="second"] {
+        background: cyan;
+      }
+      p[class$="wrap"] {
+        color: deeppink;
+        font-weight: bold;
+      }
+      [class*="three"] {
+        background: green;
+      }
+      [class|="second"] {
+        border: 2px dotted darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="one">title이 "one"인 div 영역</div>
+    <div title="two">title이 "two"인 div 영역</div>
+    <p title="two">title이 "two"인 p 영역</p>
+    <p title="first second third">title이 "first second third"인 p 영역</p>
+    <p class="second-container">class가 "second-container"인 p 영역</p>
+    <p class="second-wrap">class가 "second-wrap"인 p 영역</p>
+    <div class="one-two-three">class가 "one-two-three"인 div 영역</div>
+  </body>
+</html>

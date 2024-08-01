@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property(display)</title>
+    <style type="text/css">
+      span {
+        background-color: lightgray;
+      }
+      div {
+        background-color: tomato;
+      }
+      div.target1 {
+        display: inline;
+      }
+      span.target2 {
+        display: block;
+      }
+      div.last {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <span>span : span은 Inline level입니다.</span>
+    <div class="target1">div : div.target1은 Block이지만 Inline으로 변경했어요.</div>
+    <span>span : span은 Inline level입니다.</span>
+    <span class="target2">span : span.target2는 Inline이지만 Block으로 변경했어요.</span>
+    <div class="last">div : div.last의 display를 none로 변경했어요.</div>
+  </body>
+</html>
