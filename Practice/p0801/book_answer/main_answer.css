@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#787878;
+}
+a:hover{
+    cursor: pointer;
+}
+/* 상단 header 영역의 속성 설정 */
+header {
+    height: 70px;
+    /* 그림자 효과 */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+header > nav{
+    position: relative;
+    margin: auto;
+    max-width: 1200px;
+    /* calc() CSS 함수를 사용하면 CSS 속성의 값으로 계산식을 지정할 수 있다 */
+    width: calc(100% - 120px);
+    height: 70px;
+}
+nav > a{
+    float: left;
+    margin-left: 20px;
+    line-height: 70px;
+    height: 70px;
+}
+.header_nav_home{
+    font-size: 38px;
+    cursor: pointer;
+}
+.header_nav_menu{
+    float: right;
+    top: 0;
+    width: auto;
+    height: auto;
+    transition: none;
+}
+.header_nav_menuitem{
+    display: inline-block;
+    margin-right: 20px;
+    height: 70px;
+    line-height: 70px;
+}
+.header_nav_menuitem:last-child {
+    margin-right: 10px;
+}
+/* 중앙 contents 영역의 속성 설정 */
+.content{
+    margin: 10px auto;
+    max-width: 1200px;
+}
+
+/* 중앙 왼쪽영역의 속성 설정*/
+.content_left{
+    float: left;
+    width: 25%;
+    min-height: 500px;
+    /* background: pink; */
+}
+/* 프로필 영역의 속성 설정*/
+.profile {
+    width: 100%;
+    padding: 10px 10%;
+    text-align: center;
+}
+.profile > img {
+    width: 70%;
+     /* height: 220px;  */
+    border-radius: 10px;
+}
+
+/* 중앙 왼쪽 매장 영역의 속성 설정*/
+.store_title{
+    text-align: center;
+    padding: 10px;
+}
+.store_display{
+    padding: 10px;
+    font-size: 18px;
+    line-height: 30px;
+    background: #bdbdbd;
+    border-radius: 5px;
+}
+.store_item li{
+    padding: 10px 10px 10px 20px;
+    font-size: 18px;
+    background: #dddddd;
+    margin-top: 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+.store_area{
+    color: #414141;
+    font-weight: bold;
+}
+
+/* 중앙 왼쪽 설문조사 영역의 속성 설정*/
+.vote{
+    margin: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+.vote_title{
+    padding: 10px;
+    color: #70706e;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.vote_question{
+    font-weight: bold;
+    font-size: 18px;
+}
+.vote_answer{
+    margin-top: 10px;
+}
+.vote_answer > ul > li{
+    margin-top: 10px;
+}
+.vote_answer > ul > li:last_child{
+    margin-bottom: 10px;
+}
+.vote_answer > ul > li > img{
+    width: 35px;
+    border-radius: 3px;
+}
+.vote_button{
+    text-align: right;
+    padding-right: 10px;
+    margin: 10px;
+}
+.vote_date{
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+.button{
+    background: rgb(131, 200, 52);
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 4px;
+}
+.btn_primary{
+    border-color: rgba(128, 0, 128, 0.3);
+    background: rgb(128, 0, 128);
+    color: #fff;
+}
+
+/* 중앙 content 이미지게시판 영역의 속성 설정 */
+.menu{
+    padding: 10px 20px;
+}
+.menu ul{
+    overflow: hidden;
+}
+.menu ul > li{
+    float: left;
+    margin: 10px;
+    width: calc(25% - 20px);
+    background: #ffffff;
+    text-align: center;
+}
+.menu_item_img > img{
+    width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.menu_item_info{
+    height: 20%;
+	margin-top: 10%;
+}
+
+/* 중앙 content text게시판 영역의 속성 설정 */
+/* .article{
+    padding: 10px 20px;
+} */
+.article:first-child{
+    padding: 10px 20px;
+}
+.article > article{
+    width: 36%;
+    margin-bottom: 20px;
+}
+.article_popular{
+    float: left;
+}
+.article_new{
+    float: right;
+}
+.article_popular > h3, .article_new > h3{
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+
+table{
+    border-collapse: collapse;
+}
+.table{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.table > tbody > tr > th, .table > tbody > tr> td{
+    border: 1px solid #444444;
+    padding: 8px;
+    line-height: 1.42;
+    vertical-align: top;
+    border-top: 1px solid #000;
+}
+.table > thead > tr > th{
+    border: 1px solid #444444;
+    padding: 10px 5px;
+}
+.table_striped > tbody > tr:nth-of-type(odd){
+    background-color: #95c3c9;
+}
+.table_bordered{
+    border: 2px solid #c39c9c;
+}
+.table_bordered > tbody > tr > th, .table_bordered > tbody > tr  > td{
+    border: 2px solid #000;
+}
+.table_hover > tbody > tr:hover{
+    background-color: #ce81e1;
+}
+th.table{
+    width: 75%;
+}
+
+/* 하단 footer 영역의 속성 설정 */
+footer{
+    clear: both;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 1200px;
+    height: 70px;
+}
+footer > ul > li {
+    display: inline-block;
+    margin-right: 20px;
+    height: 50px;
+    line-height: 50px;
+}
