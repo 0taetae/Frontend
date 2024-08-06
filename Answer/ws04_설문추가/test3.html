@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON stringfy와 parse</title>
+<script>
+	user={
+	    name:'admin',
+	    email:'ssafy@naver.com',
+	    phone:'032-506-3536'};
+	//alert(user);
+	//console.log(user);
+	
+	userStr = JSON.stringify(user);
+	//alert(userStr);
+	console.log(userStr);
+	
+	JSON.parse(userStr, function(key,value){
+		//alert(key+"  "+value);
+		console.log(key+"  "+value);
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

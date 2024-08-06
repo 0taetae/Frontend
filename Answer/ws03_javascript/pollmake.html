@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/cafe.js"></script>
+</head>
+<body>
+    <div class="poll">
+        <h3 class="poll_title"></h3>
+        <div class="poll_content">
+          <form action="">
+            <div class="poll_question">
+              <label>질문 내용</label>
+              <input type="text" id="question" name="question" placeholder="질문내용..." />
+            </div>
+            <div class="poll_answer">
+              <label>답변 항목</label>
+              <button type="button" class="button" onclick="javascript:addAnswer()">추가</button>
+            </div>
+            <div>
+              <div id="poll_answer_list">
+                <input type="text" name="answer"/>
+              </div>
+            </div>
+            <div>
+              <button type="button" class="button btn_primary" onclick="javascript:makePoll()">
+                투표 생성
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

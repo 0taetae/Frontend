@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        var html = document.getElementById("divHtml");
+        var text = document.getElementById("divText");
+        var htmlToText = document.getElementById("divHtmlToText");
+
+        html.innerHTML = "<h2>Hello SSAFY!!!</h2>";
+        text.innerText = "<h2>Hello SSAFY!!!</h2>";
+        // htmlToText.innerHTML = "<h2>Hello SSAFY!!!</h2>"
+        //   .replace(/</g, "&lt;")
+        //   .replace(/>/g, "&gt;");
+        htmlToText.innerHTML = "<h2>Hello SSAFY!!!</h2>".replace("<", "&lt;").replace(">", "&gt;");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="divHtml"></div>
+    <div id="divText"></div>
+    <div id="divHtmlToText"></div>
+  </body>
+</html>

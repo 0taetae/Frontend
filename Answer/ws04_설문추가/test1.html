@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>세션 스토리지</title>
+</head>
+<body>
+	<h2>sessionStorage로 데이터 저장하기</h2>
+	<p>웹 브라우저 탭이나 창을 닫으면 Counter는 리셋됩니다.</p>
+	<p>하지만 F5를 누르면 리셋되지 않습니다.</p><br>
+	
+	<div id="counter"></div>
+	<p><button onclick="clickGrowth()">카운터 증가</button></p>
+	
+	<script>
+	function clickGrowth(){
+		if(typeof(Storage) != "undefind"){
+			if(sessionStorage.clickcount){
+				sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+			}else{
+				sessionStorage.clickcount = 1;
+			}	
+			document.getElementById("counter").innerHTML = "Counter의 현재 횟수는 " 
+                    + sessionStorage.clickcount + "입니다!";
+		}else{
+			document.getElementById("counter").innerHTML 
+                = "이 문장은 사용자의 웹 브라우저가 Web Storage API를 지원하지 않을 때 나타납니다!";
+		}
+	}
+	</script>
+</body>
+</html>
+<!-- 
+HTML5 API 추가가능: 웹스토리지, 멀티미디어, 맵, 드래그앤 드롭.....
+
+웹 스토리지는 브라우저(또는 클라이언트) 내부에 스토리지라는 저장소를 제공해주는 기능이다.
+이전에도 브라우저에는 쿠키(Cookie)라는 저장소가 있었고 쿠키는 4KB이내의 작은 텍스트의 정보를 기억할수 있는 저장소이다. 
+웹 스토리는 사용자의 컴퓨터에 텍스트로 저장되어 있고, 쉽게 접근할 수 있고 내용도 확인이 가능하다(5MB 저장가능).
+
+1. sessionStorage
+ : 1개의 세션만을 저장하는 데이터 객체이다.
+   브라우저의 탭(또는 창)을 닫으면 객체에 저장된 데이터가 사라진다.
+
+2. localStorage
+: 보관 기한이 없는 데이터를 저장하는 객체이다.
+  브라우저의 탭(또는 창)을 닫거나 컴퓨터를 재 부팅해도 저장된 데이터는 사라지지 않는다.
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
