@@ -1,0 +1,16 @@
+ws06_Ajax    --Dyanmaic Web Project(Ajax추가, bootstrap(X))
+   webapp
+       css
+       img
+       data
+         essay.json      --복사
+         programming.xml --복사
+       js
+         cafe.js
+         httpRequest.js  --추가
+       WS_Frontend_06_3.html
+       pollmake.html  
+         
+          
+         
+   
