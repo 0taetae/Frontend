@@ -1,91 +1,84 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     list-style: none;
-}
-a{
+  }
+  
+  a {
     text-decoration: none;
-    color:#787878;
-}
-header{
+    color: whitesmoke;
+  }
+  
+  /* header 태그 안에 CSS 속성 */
+  header {
     height: 70px;
     background-color: black;
-    /* 그림자 효과 : , 그림자 시작부분 두께,  퍼짐정도*/
-}
-header > nav{
-    /* 요소 배치, 요소 자기 자신을 기준으로 배치 */
-    position: relative;
-    margin: auto;
-    /* calc() css 함수를 사용하면 css 속성의 값으로 계산식을 지정 가능 */
-    width: calc(100% - 120px);
-    height: 70px;
+    color: white;
+    line-height: 70px;
+    padding: 0px 30px;
+  }
+  
+  .header-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-nav > a{
-    /* 요소를 왼쪽으로 띄움 */
-    float: left;
-    margin-left: 20px;
-    line-height: 70px;
-    height: 70px;
-}
-.header_nav_home{
-    font-size: 20px;
-    cursor: pointer;
-}
-.header_nav_menu{
-    /* 요소를 오른쪽으로 띄움 */
-    float: right;
-    top: 0;
-    width: auto;
-    height: auto;
-    /* 애니메이션 효과 적용, 시간 */
-    transition: none;
-}
-.header_nav_menuitem{
-    display: inline-block;
-    margin-right: 20px;
-    height: 70px;
-    line-height: 70px;
-}
-main{
+  }
+  
+  /* main 태그 안에 CSS 속성 */
+  .content {
+    margin: 10px 30px;
     display: flex;
-    flex-direction: row;
-    margin:10px;
-}
-section{
-    width: 1500px;
-}
-main > section > ul{
+  }
+  
+  /* section 공간 */
+  .content-movie-list {
+    width: 75%;
+  }
+  
+  /* asdie 공간 */
+  .content-movie-like {
+    position: fixed;
+    width: 25%;
+    top: 100px;
+    right: 20px;
+  }
+  
+  .content-movie-list-ul {
     display: flex;
-    flex-wrap:wrap;
-    width:80%;
-
-}
-li{
-    margin:10px;
-}
-aside{
-    position:fixed;
-    height:30px;
-    right:10px;
-}
-.movie_list_info{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .list-item {
+    margin: 10px;
+  }
+  
+  .movie-info {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-footer{
-    height: 50px;
+  }
+  
+  .like-btn {
+    margin: 20px;
+    padding: 5px;
+  }
+  
+  /* footer 태그 안에 CSS 속성 */
+  footer {
     background-color: black;
-}
-footer > ul{
+    color: white;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .footer-list {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    color:#787878;
-}
+  }
+  
+  .footer-list a {
+    margin: 0px 10px;
+  }
+  
