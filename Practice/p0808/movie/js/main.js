@@ -2,17 +2,18 @@ window.onload = function () {
     let movies = localStorage.getItem("movies");
   
     let likeMovieList = document.querySelector("#like-movie-list");
-  
-    likeMovieList = document.getElementById("like-car-list");
+    
+    likeMovieList = document.getElementById("like-movie-list");
+
   
     if (movies === null) {
-      likeMovieList.innerText = "아직 찜한 자동차가 없습니다...";
+      likeMovieList.innerText = "아직 찜한 영화가 없습니다...";
     } else {
       movies = JSON.parse(movies);
   
       let likeMovieListHtml = document.createElement("ul");
       for (let i = 0; i < movies.length; i++) {
-        likeMovieListHtml.innerHTML += `<li>${movies[i]["title"]} | ${movies[i]["genre"]} | ${movies[i]["director"]} | ${movies[i]["time"]}</li>`;
+        likeMovieListHtml.innerHTML += `<div class="border">${movies[i]["title"]} | ${movies[i]["genre"]} | ${movies[i]["director"]} | ${movies[i]["runningTime"]}</div>`;
       }
   
       likeMovieList.appendChild(likeMovieListHtml);
@@ -22,7 +23,7 @@ window.onload = function () {
     const xhr = new XMLHttpRequest();
     const method = "GET";
     // 데이터 경로 입력.
-    const url = "movie.json";
+    const url = "data/movie.json";
   
     // 요청을 초기화 하기 위한 메서드
     xhr.open(method, url);
@@ -36,26 +37,27 @@ window.onload = function () {
         // 상태코드가 성공일때
         if (xhr.status === 200) {
           const resJson = JSON.parse(xhr.responseText);
-          consMovieData = resJson.cars;
-          let movieList = document.querySelector(".content-movie-list-ul");
+          const movieData = resJson.movies;
+          console.log(movieData)
+          let movieList = document.querySelector(".content-movie-list");
           for (let i = 0; i < movieData.length; i++) {
             let movieItem = `
-              <li>
-                <div class="list-item">
+              <div class="list-item card col-lg-3 col-md-6">
+                <img src="${movieData[i]["img"]}" class="card-img-top" alt='' />
+                <div class="movie-info card-body d-flex justify-content-around align-items-center">
                   <div>
-                    <img src="${movieData[i]["img"]}" alt='' />
+                    <div>${movieData[i]["title"]}</div>
+                    <hr />
+                    <div>${movieData[i]["genre"]}</div>
+                    <div>${movieData[i]["director"]}</div>
+                    <div>${movieData[i]["runningTime"]}</div>
                   </div>
-                  <div class="movie-info">
-                    <div>
-                      <div>${movieData[i]["VIN"]}</div>
-                      <div>${movieData[i]["modelName"]}</div>
-                      <div>${movieData[i]["color"]}</div>
-                      <div>${movieData[i]["mileage"]} km</div>
-                    </div>
-                    <button class="like-btn">찜</button>
+                  <div>
+                    <button class="like-btn btn-xs "><i class="like-btn bi bi-heart-fill text-danger"></i></button>
                   </div>
+                  
                 </div>
-              </li>
+              </div>
               `;
             movieList.innerHTML += movieItem;
           }
@@ -89,7 +91,7 @@ window.onload = function () {
     //                 <div>${movieData[i]["title"]}</div>
     //                 <div>${movieData[i]["genre"]}</div>
     //                 <div>${movieData[i]["director"]}</div>
-    //                 <div>${movieData[i]["time"]} km</div>
+    //                 <div>${movieData[i]["runningTime"]}</div>
     //               </div>
     //               <button class="like-btn">찜</button>
     //             </div>
@@ -105,21 +107,20 @@ window.onload = function () {
   };
   // 동적으로 생성된 버튼에는 이벤트 등록이 안됨 (정확히 말하면 동적으로 생성하는 스코프 안에서 등록 해야함)
   // 부모 요소에 이벤트 리스터 등록 (버블링)
-  const contentMovieList = document.querySelector(".content-movie-list-ul");
+  const contentMovieList = document.querySelector(".content-movie-list");
   
   // 긱 요소를 돌면서 해당 버튼에 클릭 이벤트 달기
   contentMovieList.addEventListener("click", function (event) {
     // 구조에 따라 달라질 수도 있음.
     // 찜하기 버튼이 아니라면 동작 X
-    if (event.target.className !== "like-btn") return;
-  
-    const data = event.target.parentElement.innerText.split("\n");
+    if (!event.target.className.includes("like-btn")) return;
+    const data = event.target.closest('.list-item').innerText.split("\n");
   
     const movies = {
         title: data[0],
         genre: data[1],
         director: data[2],
-        time: data[3],
+        runningTime: data[3],
     };
   
     let localMovies = localStorage.getItem("movies");
